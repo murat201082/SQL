@@ -20,3 +20,5 @@ where lastName like "g%";
 
 SELECT * from invoices where InvoiceDate BETWEEN "2010-01-01" AND "2019-01-01" and InvoiceDate like "%-02-%"; 
 SELECT * FROM invoices where InvoiceDate like ""
+SELECT FirstName,LastName,City, Address FROM customers WHERE FirstName like '___';
+SELECT FirstName,LastName,City, Address FROM customers WHERE LastName like 'Sch%' or LastName like 'Go%';
