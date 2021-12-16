@@ -22,4 +22,12 @@
   /* araclar.db adındaki veritabanını kullanarak Markalar ve Siparisler tablolarındaki 
  marka_id'si ayni olan kayıtların marka_id, marka_adi, siparis_adedi ve siparis_tarihi   
  bilgilerini  listeleyen bir sorgu yaziniz.*/
+ /* sql de refere edilen yer primary key olmalı yani forein key solda primary key sağda olur*/
+ /* from dan sonra sol tablo gelir joinden sonra sağ tablo gelir*/
+ SELECT * FROM markalar;
+ SELECT markalar.marka_id, markalar.marka_adi, siparisler.siparis_adedi, siparisler.siparis_tarihi
+ FROM markalar
+ INNER JOIN siparisler
+ ON markalar.marka_id = siparisler.marka_id;
+ 
  
